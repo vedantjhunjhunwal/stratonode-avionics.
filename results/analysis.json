@@ -1,0 +1,276 @@
+{
+  "environment": {
+    "cruise_alt_m": 15500.0,
+    "cruise_alt_ft": 50853,
+    "cruise_T_C": -69.99999999999997,
+    "cruise_p_kPa": 11.131394475757522,
+    "density_ratio": 0.15582407882824448,
+    "ground_alt_m": 5400.0,
+    "ground_cold_C": -30.0
+  },
+  "budget": [
+    {
+      "phase": "ground warm-up",
+      "hours": 1.0,
+      "board_W": 2.092533258475291,
+      "heater_batt_W": 11.737652991898335,
+      "heater_bay_W": 0.0,
+      "total_W": 13.830186250373625,
+      "energy_Wh": 13.830186250373625
+    },
+    {
+      "phase": "climb",
+      "hours": 1.5,
+      "board_W": 2.092533258475291,
+      "heater_batt_W": 5.673168053458111,
+      "heater_bay_W": 1.7744130776073652,
+      "total_W": 9.540114389540767,
+      "energy_Wh": 14.31017158431115
+    },
+    {
+      "phase": "cruise",
+      "hours": 7.5,
+      "board_W": 5.409538056210284,
+      "heater_batt_W": 6.31481924835986,
+      "heater_bay_W": 1.9906665148738762,
+      "total_W": 13.71502381944402,
+      "energy_Wh": 102.86267864583016
+    },
+    {
+      "phase": "descent",
+      "hours": 0.5,
+      "board_W": 2.092533258475291,
+      "heater_batt_W": 5.673168053458111,
+      "heater_bay_W": 1.7744130776073652,
+      "total_W": 9.540114389540767,
+      "energy_Wh": 4.770057194770383
+    }
+  ],
+  "mission_energy_Wh": 135.7730936752853,
+  "cruise_rails": {
+    "rail_3v3": 0.163,
+    "rail_5v": 4.66,
+    "ldo_loss": 0.08424469696969698,
+    "i_5v": 0.9814489393939395,
+    "buck_loss": 0.49891066065831685,
+    "buck_eff": 0.9077143315990058,
+    "path_loss": 0.0033826985822696855,
+    "total": 5.409538056210284,
+    "board_dissipation": 0.7495380562102836
+  },
+  "peak_rails": {
+    "rail_3v3": 0.22300000000000003,
+    "rail_5v": 9.2,
+    "ldo_loss": 0.11515378787878792,
+    "i_5v": 1.9076307575757574,
+    "buck_loss": 1.1534336855971596,
+    "buck_eff": 0.8921176402981655,
+    "path_loss": 0.013230329016549509,
+    "total": 10.704817802492496,
+    "board_dissipation": 1.504817802492497
+  },
+  "rail_limits": {
+    "buck_A": 3.0,
+    "peak_5v_A": 1.9076307575757574,
+    "buck_current_margin_pct": 36.41230808080809,
+    "ldo_A": 0.6,
+    "peak_3v3_A": 0.0675757575757576
+  },
+  "pack": {
+    "config": "4S5P",
+    "n_parallel": 5,
+    "cells": 20,
+    "usable_Wh_eol_cold": 183.312,
+    "required_Wh": 169.71636709410663,
+    "margin_pct": 8.010796565280408,
+    "mass_kg": 0.96,
+    "rated_Wh": 241.20000000000002
+  },
+  "thermal": {
+    "battery_box_G_W_K_cruise": 0.0841975899781315,
+    "battery_box_G_W_K_sea_level": 0.09425350367983701,
+    "battery_heater_cruise_W": 6.31481924835986,
+    "battery_heater_ground_W": 3.294906469519173,
+    "battery_heater_rating_W": 12.62963849671972,
+    "battery_heater_ohms_at_14V4": 16.418522197120478,
+    "bay_board_dissipation_W": 0.7495380562102836,
+    "bay_unheated_cruise_C": -57.54456726794558,
+    "bay_heater_cruise_W": 1.9906665148738762,
+    "bay_heater_rating_W": 3.9813330297477525,
+    "warmup_min_from_cold_soak": 54.266666666666666,
+    "pack_heat_capacity_J_K": 1014.0
+  },
+  "junctions": [
+    {
+      "part": "TPS62933 buck (SOT-583)",
+      "p_cold_W": 0.49891066065831685,
+      "tj_cold_C": 43.52248866940873,
+      "p_hot_W": 1.2678915310517052,
+      "tj_hot_C": 138.0727161584326,
+      "rating": "-40..150 C",
+      "margin_cold_K": 83.52248866940873,
+      "margin_hot_K": 11.927283841567402
+    },
+    {
+      "part": "AP2112K LDO (SOT-23-5)",
+      "p_cold_W": 0.08424469696969698,
+      "tj_cold_C": 4.104204048648729,
+      "p_hot_W": 0.11515378787878792,
+      "tj_hot_C": 69.29849542782802,
+      "rating": "-40..125 C",
+      "margin_cold_K": 44.104204048648725,
+      "margin_hot_K": 55.701504572171984
+    },
+    {
+      "part": "STM32G474 MCU (LQFP-48)",
+      "p_cold_W": 0.15,
+      "tj_cold_C": -12.778666274640146,
+      "p_hot_W": 0.2,
+      "tj_hot_C": 60.60284446275044,
+      "rating": "-40..125 C",
+      "margin_cold_K": 27.221333725359855,
+      "margin_hot_K": 64.39715553724956
+    },
+    {
+      "part": "heater FET AO3400A (SOT-23)",
+      "p_cold_W": 0.03076924547797545,
+      "tj_cold_C": -18.50628723272427,
+      "p_hot_W": 0.02260597626953298,
+      "tj_hot_C": 52.67985309312299,
+      "rating": "-55..150 C",
+      "margin_cold_K": 36.49371276727573,
+      "margin_hot_K": 97.320146906877
+    }
+  ],
+  "brownout": {
+    "step_current_A": 2.0652202389846304,
+    "cases": [
+      {
+        "case": "heated pack, end of flight",
+        "r_cell_mohm": 62.52037142611261,
+        "r_pack_mohm": 50.01629714089009,
+        "v_ocv": 13.879999999999999,
+        "v_terminal": 13.776705330865564,
+        "margin_to_bms_V": 2.5767053308655647,
+        "margin_to_buck_V": 8.176705330865564
+      },
+      {
+        "case": "cold-soaked start, 50% SOC",
+        "r_cell_mohm": 217.10759539149436,
+        "r_pack_mohm": 173.68607631319549,
+        "v_ocv": 14.72,
+        "v_terminal": 14.36129999996816,
+        "margin_to_bms_V": 3.1612999999681612,
+        "margin_to_buck_V": 8.761299999968161
+      },
+      {
+        "case": "heater failed at cruise, 15% SOC",
+        "r_cell_mohm": 331.86539710700896,
+        "r_pack_mohm": 265.49231768560713,
+        "v_ocv": 13.879999999999999,
+        "v_terminal": 13.331699892220746,
+        "margin_to_bms_V": 2.1316998922207464,
+        "margin_to_buck_V": 7.731699892220746
+      }
+    ]
+  },
+  "holdup": {
+    "p_full_W": 27.315789328959966,
+    "p_essential_W": 0.9411764705882354,
+    "dropout_ms": 50.0,
+    "c_required_uF_with_shedding": 999.4662292230447,
+    "c_required_uF_without": 24250.523196874972,
+    "chosen": "3 x 470 uF 25 V aluminium polymer",
+    "chosen_uF_cold": 1339.5,
+    "esr_step_mV_polymer_cold": 27.315789328959966,
+    "esr_step_mV_electrolytic_cold": 1821.0526219306644
+  },
+  "solder": {
+    "target_flights": 1000,
+    "heated_swing": "25 to -25.0 C",
+    "unheated_swing": "25 to -58 C",
+    "rows": [
+      {
+        "package": "0603 resistor/MLCC",
+        "n_0p1pct_heated": 7184.154236976496,
+        "n_0p1pct_unheated": 2826.9604181050345,
+        "ok_heated": true,
+        "ok_unheated": true
+      },
+      {
+        "package": "0805 resistor/MLCC",
+        "n_0p1pct_heated": 4275.349998955048,
+        "n_0p1pct_unheated": 1662.1804856780188,
+        "ok_heated": true,
+        "ok_unheated": true
+      },
+      {
+        "package": "1206 current shunt",
+        "n_0p1pct_heated": 2407.74742554014,
+        "n_0p1pct_unheated": 923.683507368156,
+        "ok_heated": true,
+        "ok_unheated": false
+      },
+      {
+        "package": "1210 MLCC",
+        "n_0p1pct_heated": 2407.74742554014,
+        "n_0p1pct_unheated": 923.683507368156,
+        "ok_heated": true,
+        "ok_unheated": false
+      },
+      {
+        "package": "2512 current shunt",
+        "n_0p1pct_heated": 487.2763758337578,
+        "n_0p1pct_unheated": 180.12142943514496,
+        "ok_heated": false,
+        "ok_unheated": false
+      },
+      {
+        "package": "LQFP-48 MCU",
+        "n_0p1pct_heated": 8024428.884932346,
+        "n_0p1pct_unheated": 1127257.764510169,
+        "ok_heated": true,
+        "ok_unheated": true
+      },
+      {
+        "package": "SOT-23 FET",
+        "n_0p1pct_heated": 2234694.685053407,
+        "n_0p1pct_unheated": 304737.9557326349,
+        "ok_heated": true,
+        "ok_unheated": true
+      }
+    ]
+  },
+  "vibration": {
+    "psd_g2_Hz": 0.04,
+    "rows": [
+      {
+        "component": "LQFP-48 MCU at board centre",
+        "fn_Hz": 650.3883834999546,
+        "Q": 25.502713257611525,
+        "g_rms_response": 32.28267515295476,
+        "z3sigma_mm": 0.05687300268883774,
+        "z_allow_mm": 0.46937721669842,
+        "margin": 8.253076055548988
+      },
+      {
+        "component": "SOIC-8 CAN transceiver",
+        "fn_Hz": 650.3883834999546,
+        "Q": 25.502713257611525,
+        "g_rms_response": 32.28267515295476,
+        "z3sigma_mm": 0.05687300268883774,
+        "z_allow_mm": 0.6361290370960396,
+        "margin": 11.185079159199912
+      },
+      {
+        "component": "1206 shunt (leadless, c=2.25)",
+        "fn_Hz": 650.3883834999546,
+        "Q": 25.502713257611525,
+        "g_rms_response": 32.28267515295476,
+        "z3sigma_mm": 0.05687300268883774,
+        "z_allow_mm": 0.34985312120910544,
+        "margin": 6.151479694561122
+      }
+    ]
+  }
+}

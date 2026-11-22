@@ -1,0 +1,9 @@
+{
+  "seed": 2, "load_shedding": true,
+  "hours": 10.5, "energy_Wh": 136.5, "heater_energy_Wh": 89.4, "final_soc": 0.474,
+  "battery_min_in_flight_C": 4.20, "battery_max_C": 6.54, "bay_min_in_flight_C": -25.44, "bay_max_C": -22.88,
+  "dropouts": 32, "dropout_longest_ms": 49.7, "holdup_min_V": 12.67, "brownout_resets": 0, "pm_recoveries": 32, "pm_power_lost": 0,
+  "i2c_lockups_recovered": 21, "i2c_unrecovered": 0, "ntc_fault_detected": true, "heater_sensor_faults": 1,
+  "gnss_sentences_ok": 68317, "gnss_corrupted_sent": 7375, "gnss_bad_checksum": 7283, "gnss_implausible_rejected": 55, "gnss_corrupt_accepted_with_wrong_data": 2, "gnss_worst_accepted_alt_error_m": 40.0,
+  "can_frames": 378000, "can_errors_injected": 758, "can_errors_caught": 758
+}

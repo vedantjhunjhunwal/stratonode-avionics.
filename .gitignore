@@ -1,0 +1,9 @@
+build/
+__pycache__/
+.pytest_cache/
+*.ses
+hw/stratonode/fab/
+hw/stratonode/*.kicad_prl
+hw/stratonode/*-backups/
+hw/stratonode/stratonode.xml
+hw/stratonode/stratonode.dsn
